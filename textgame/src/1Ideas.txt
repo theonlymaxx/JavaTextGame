@@ -1,0 +1,147 @@
+                                             Ideas:
+Order of Operations
+1) Login 
+1a) Get User file from S3 and save available character names
+2) Skip Lines
+3) Show Main Menu
+    - Character Selection
+        - Select Character
+        - Make a New Character
+    - Options
+        - N/A
+    - Exit
+        -Exit the Game
+4) Once Main Menu is selected, show character selection screen
+5) Character chooses Select Character
+6) Request Character File from S3
+7) Update CharacterVariables.java
+8) Start Game from set Chapter and Checkpoint
+9) Player plays game, charactervariables updates throughout
+10) Player chooses to stop playing
+11) Update Character File 
+12) Return to Main Screen
+
+New Player
+1) Input account details
+2) Create Account Data File
+3) Create new character
+4) Create and input character data file
+5) Upload files to S3
+6) Set character data to charactervariables.java
+7) Start Game
+
+Returning Player
+1) Login
+2) Output available character or option for new character (depending of # of characters left to make)
+3) Get character choice
+4) Get Character Data File from S3
+5) Set Character Data to charactervariables.java
+6) Start Game from recored leftover chapter/checkpoint
+
+Quitting the Game
+1) Update Character Data File
+2) Upload to S3
+
+
+
+                                                                                                                FILE/CHARACTER STUFF
+
+User File Outline
+1) password
+2) number of characters
+3) number of character creations left
+4) File name of character 1
+5) File name of character 2
+Character File Outline
+1) Character name
+2) Story Chapter #
+3) Story Chapter Checkpoint #
+4) HP
+5) ATK
+6) DEF
+7) Luck
+8) Crit
+9) Charm
+Base Character Variables
+100 HP
+10 ATK
+1 DEF
+1 LUCK
+1 CRIT
+1 CHARM
+Chracter Races
+1) Human (+2 ATK, +2 DEF, +1 Luck, +1 CRIT, +3 Charm)  // Added CHARM for reduced ATK
+2) Elf (+3 ATK,+1 DEF, +1 Luck, +4 Crit, +1 Charm) // Added CRIT for reduced DEF
+3) Dwarf (+15 HP, +2 ATK, +3 DEF) // Added HP and DEF for reduced CHARM and CRIT, and LUCK
+4) Orc (+4 ATK, +4 DEF)  // Added ATK and DEF for reduced CHARM, LUCK, and CRIT
+Character Classes
+1) Champion (+2 ATK, -1 CRIT) // Added ATK for reduction of CRIT
+2) Ranger (+2 CRIT, -1 DEF) // Added CRIT for reduction of DEF
+3) Mage (+2 ATK, +2 CRIT, -1 CHARM, -1 LUCK, -1 DEF) // Added ATK, and CRIT for reduction of CHARM, LUCK, and DEF
+4) Thief (+2 CHARM, +2 LUCK, -1 CRIT, -1 DEF) // Added CHARM, and LUCK for reduced CRIT, and DEF
+
+Main Screen
+Play -> Character Selection -> Read and set character variables -> start game
+
+Loading Screen
+0%                      100%
+**************************    //25 (4% per *)
+COOOOOOLDOWN!!!!!#@#$%#@%^%&*(^&%#$^@##*^&(*&^%$#%^%&%$%^&*&^%$#@#$%^))
+
+TO DO LIST             
+1) TEST TEST TEST
+2) COMBAT CODE
+3) LEVELING / ENEMY SCALING $$$
+4) TUTORIAL AND CHAPTERS
+6) SOLVE MULTIPLAYER
+
+
+Skills?
+class skillname{
+  skillname
+  skilldescription
+  skilluse # (1-6 corresponding to character variables)
+  skillclass # (1-4 corresponding to character classes)
+  skillcooldown
+  skilleffect
+}
+
+Champion Skills
+    Major Gains - Increase DEF for so many turns
+    Mighty Blow - Triple ATK for 1 turns
+    Armor Pierce - Reduce enemy DEF for so many turns
+         Attacks
+              Basic Attack (Base ATK + Addons)
+              Skill 1
+              Skill 2
+    
+Ranger Skills
+    Piercing Shot - Reduce enemy DEF for so many turns
+    Freezing Shot - Freeze enemy for so many turns and deny them turns
+    Flaming Shot - Burn enemy for so many turns
+          Attacks
+              Basic Attack (Base ATK + Addons)
+              Skill 1
+              Skill 2
+    
+Mage Skills
+    Shield - shield self or ally players for so many turns
+    Heal - heal self or ally players for so many turns
+    Cooldown Reducer - Reduces cooldown of an ability of self or ally by so many seconds
+          Attacks
+              Basic Attack (Base ATK + Addons)
+              Skill 1
+              Skill 2
+Thief Skills
+    Pickpocket - Chance of random loot from alive enemy
+    Trap - Trap enemy and deny turns
+    Vanish - Dissappear and heal self or ally
+          Attacks
+              Basic Attack (Base ATK + Addons)
+              Skill 1
+              Skill 2
+    
+Skill Tree
+
+
+  
